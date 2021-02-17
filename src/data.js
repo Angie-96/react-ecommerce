@@ -10,7 +10,7 @@ const data = [
     price: "123",
     quantity: 10,
     details:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      "The DUALSHOCK Wireless Controller for PS4 gives you what you want in your gaming from precision control over your games to sharing your greatest gameplay moments with your friends while providing easy recharging so you are always ready. ",
   },
   {
     id: "234",
@@ -22,7 +22,7 @@ const data = [
     price: "234",
     quantity: 4,
     details:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      "The all new lighter and slimmer PlayStation4 system has a 1TB hard drive for all of the greatest games, TV, music and more. Incredible Games You've come to the right place. Exclusive games take you on incredible journeys, from critically acclaimed indies to award-winning AAA hits. Endless Entertainment Something new and amazing is always in reach. Find what you're looking for and get it at the touch of a button via PlayStation entertainment options like PlayStation Vue and more.",
   },
   {
     id: "345",
@@ -35,42 +35,42 @@ const data = [
     price: "345",
     quantity: 33,
     details:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      "Massive 270 Degrees turn-ratio; Customizable sensitivities, totally control re-mappable – PS4/PS4/PC compatibility: APEX covers the full breadth of Racing Wheel features.",
   },
   {
     id: "678",
     images: [
-      "https://http2.mlstatic.com/D_NQ_NP_716570-MLA44191343006_112020-O.webp",
+      "https://images-na.ssl-images-amazon.com/images/I/61m1Dot5KCL._AC_SL1000_.jpg",
     ],
-    name: "Celular Motorola G9 Play 4gb 64gb Azul Libre Garantía ",
+    name: "Samsung Electronics Samsung Galaxy S21 5G",
     price: "26.499",
     quantity: 33,
     details:
-      "El Motorola G9 Play posee el novedoso sistema operativo Android 10 que incorpora respuestas inteligentes y acciones sugeridas para todas tus aplicaciones. Entre sus diversas funcionalidades encontrarás el tema oscuro, navegación por gestos y modo sin distracciones, para que completes tus tareas mientras disfrutás al máximo tu dispositivo.",
+      "Samsung Galaxy S21 smart phone lets you get creative, stay connected and do it all your way. We know your life moves fast, and there’s a fine line between what makes a moment ordinary and what makes it extraordinary. That’s why we created S21. With the ability to record in 8K, your videos aren’t just cinema quality, they’re double the resolution of 4K video. Or use the 64MP camera for still shots that come out clear whether it’s day or night.",
   },
   {
     id: "910",
     images: [
-      "https://http2.mlstatic.com/D_NQ_NP_621392-MLA43401053082_092020-O.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_711307-MLA43401048413_092020-O.webp",
+      "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SL1500_.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/61176H1a4cL._AC_SL1000_.jpg",
     ],
-    name: "Notebook Exo Smart E19 Celeron Ram4gb Ssd64gb Win10 14",
+    name: "Acer Aspire 5 Slim Laptop, 15.6 inches",
     price: "39.999",
     quantity: 353,
     details:
-      "¿Llevas tu notebook a todos lados? Con la nueva EXO, tené todas tus fotos y archivos directos en la nube. vas a estar conectado y llevarla en tu mochila a cualquier lado por su exclusivo diseño!",
+      "Acer Aspire 5 A515-43-R19L comes with these high level specs: AMD Ryzen 3 3200U Dual-Core Processor 2.6GHz with Precision Boost up to 3.5GHz (Up to 4MB L3 Cache), Windows 10 in S mode, 15.6' Full HD (1920 x 1080) widescreen LED-backlit IPS Display, AMD Radeon Vega 3 Mobile Graphics, 4GB DDR4 Memory, 128GB PCIe NVMe SSD",
   },
   {
     id: "111",
     images: [
-      "https://http2.mlstatic.com/D_NQ_NP_621810-MLA44820458471_022021-O.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_972802-MLA44820445624_022021-O.webp",
+      "https://images-na.ssl-images-amazon.com/images/I/61Ly9zgVyIL._AC_SL1500_.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/81wcS8CnlRL._AC_SL1500_.jpg",
     ],
-    name: "Botas Zapatilla Cuero Moto Protecciones Alpina Baires Cortas",
+    name: "Blue Yeti USB Mic for Recording & Streaming on PC and Mac",
     price: "2.500",
     quantity: 323,
     details:
-      "Botas Alpina Baires Caña corta con protecciones y refuerzos en puntera y zona de tobillos Confeccionadas en Cuero Ecológico Diseño anatómico con reflectivos en la laterales y zona posterior. Suela pvc ultra liviana y alto grip",
+      "Yeti is the most advanced and versatile multi-pattern USB microphone available Anywhere. Combining three capsules and four different pattern settings, Yeti is the ultimate tool for creating amazing recordings, directly to your computer. ",
   },
 ];
 
