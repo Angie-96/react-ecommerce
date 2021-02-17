@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { Button, Grid, makeStyles } from "@material-ui/core";
-import { DataContext } from "./DataContext";
+import { Button, Grid, makeStyles, Typography } from "@material-ui/core";
 import { CartContext } from "./CartContext";
+import { DataContext } from "./DataContext";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,8 +24,9 @@ const useStyles = makeStyles((theme) => ({
   img: {
     height: "50vh",
     [theme.breakpoints.down("md")]: {
+      maxHeight: 300,
+      maxWidth: "100%",
       height: "auto",
-      width: "100%",
     },
   },
 
@@ -36,17 +37,17 @@ const useStyles = makeStyles((theme) => ({
     padding: "5px 8px",
   },
 
-  productName: {
+  /* productName: {
     marginTop: 0,
     fontFamily: "Lato, sans-serif",
-  },
+  }, */
 
-  productPrice: {
+  /* productPrice: {
     fontFamily: "sans-serif",
     fontSize: 25,
-  },
+  }, */
   productDesc: {
-    fontFamily: "Roboto",
+    marginBottom: 30,
   },
 }));
 
@@ -54,31 +55,13 @@ export const ProductDetails = () => {
   let { id } = useParams();
   const classes = useStyles();
 
-  const data = useContext(DataContext);
-  const { cartProducts, setCartProducts } = useContext(CartContext);
+  const { filteredProducts } = useContext(DataContext);
+  const { addToCart } = useContext(CartContext);
 
-  const productChosen = data.filter((product) => product.id === id);
-
-  const handleAddToCart = () => {
-    setCartProducts([
-      ...cartProducts,
-      {
-        id: { id },
-        image: productChosen[0].images[0],
-        name: productChosen[0].name,
-        price: productChosen[0].price,
-      },
-    ]);
-  };
+  const productChosen = filteredProducts.filter((product) => product.id === id);
 
   return (
-    <Grid
-      container
-      spacing={3}
-      xs={12}
-      direction="row"
-      className={classes.root}
-    >
+    <Grid container spacing={3} direction="row" className={classes.root}>
       <Grid item xs={12} md={8}>
         <div className={classes.imgContainer}>
           <img
@@ -90,10 +73,24 @@ export const ProductDetails = () => {
       </Grid>
       <Grid item xs={12} md={4}>
         <div className={classes.description}>
-          <h2 className={classes.productName}>{productChosen[0].name}</h2>
-          <h3 className={classes.productPrice}>$ {productChosen[0].price}</h3>
-          <p className={classes.productDesc}>{productChosen[0].details}</p>
-          <Button variant="contained" color="primary" onClick={handleAddToCart}>
+          <Typography gutterBottom variant="h5" className={classes.productName}>
+            {productChosen[0].name}
+          </Typography>
+          <Typography
+            gutterBottom
+            variant="h4"
+            className={classes.productPrice}
+          >
+            $ {productChosen[0].price}
+          </Typography>
+          <Typography variant="body2" className={classes.productDesc}>
+            {productChosen[0].details}
+          </Typography>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => addToCart(productChosen[0])}
+          >
             Add to Cart
           </Button>
         </div>

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Grid, makeStyles } from "@material-ui/core";
 import { ProductItem } from "./ProductItem";
+import { DataContext } from "./DataContext";
 
 const useStyles = makeStyles({
   root: {
@@ -19,7 +20,8 @@ const useStyles = makeStyles({
   },
 });
 
-export const ProductsGrid = ({ filteredProducts }) => {
+export const ProductsGrid = () => {
+  const { filteredProducts } = useContext(DataContext);
   const classes = useStyles();
 
   return (

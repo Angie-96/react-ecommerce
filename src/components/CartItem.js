@@ -1,5 +1,10 @@
 import React, { useContext } from "react";
-import { IconButton, makeStyles, TextField } from "@material-ui/core";
+import {
+  IconButton,
+  makeStyles,
+  TextField,
+  Typography,
+} from "@material-ui/core";
 import { DeleteForeverOutlined } from "@material-ui/icons";
 import { CartContext } from "./CartContext";
 
@@ -32,15 +37,8 @@ const useStyles = makeStyles({
 });
 
 export const CartItem = ({ id, image, name, price }) => {
-  const { cartProducts, setCartProducts } = useContext(CartContext);
+  const { deleteFromCart } = useContext(CartContext);
   const classes = useStyles();
-
-  const handleDeleteProducts = (id) => {
-    const newCartProducts = cartProducts.filter(
-      (productToDelete) => productToDelete.id !== id
-    );
-    setCartProducts(newCartProducts);
-  };
 
   return (
     <div className={classes.root}>
@@ -49,7 +47,7 @@ export const CartItem = ({ id, image, name, price }) => {
           <img src={image} alt={name} className={classes.image} />
         </div>
         <div className={classes.productName}>
-          <p>{name}</p>
+          <Typography variant="body1">{name}</Typography>
         </div>
         <div className={classes.quantityTextField}>
           <TextField
@@ -59,12 +57,14 @@ export const CartItem = ({ id, image, name, price }) => {
             value="1"
           />
         </div>
-        <div>{price}</div>
+        <Typography variant="h5" component="h2">
+          $ {price}
+        </Typography>
         <div>
           <IconButton
             aria-label="delete"
             className={classes.deleteBtn}
-            onClick={() => handleDeleteProducts(id)}
+            onClick={() => deleteFromCart(id)}
           >
             <DeleteForeverOutlined />
           </IconButton>

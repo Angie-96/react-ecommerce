@@ -1,29 +1,32 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import InputBase from "@material-ui/core/InputBase";
-import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
-import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { CartContext } from "./CartContext";
+import { SearchBar } from "./SearchBar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: "2px 4px",
+    backgroundColor: "rgb(186, 120, 248)",
+    width: "100%",
+    textAlign: "center",
+    height: 80,
     display: "flex",
-    alignItems: "center",
-    width: 600,
-    margin: "0 auto",
+    alignItems: "flex-end",
+    justifyContent: "center",
+    paddingBottom: 20,
   },
+
   headerContainer: {
     width: "60%",
     display: "flex",
+    justifyContent: "center",
     [theme.breakpoints.down("md")]: {
       width: "90%",
     },
   },
+
   input: {
     flex: 1,
   },
@@ -53,29 +56,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Header = ({ handleInputChange }) => {
+export const Header = () => {
   const { cartProducts } = useContext(CartContext);
   const classes = useStyles(cartProducts);
 
   return (
-    <div className="header">
+    <div className={classes.root}>
       <div className={classes.headerContainer}>
-        <Paper component="form" className={classes.root}>
-          <InputBase
-            className={classes.input}
-            placeholder="Search..."
-            inputProps={{ "aria-label": "search..." }}
-            onChange={handleInputChange}
-          />
-          <Divider className={classes.divider} orientation="vertical" />
-          <SearchIcon className={classes.iconButton} />
-        </Paper>
-
-        <IconButton className={classes.cartButton} aria-label="cart">
-          <Link to="/cart">
+        <SearchBar />
+        <Link to="/cart">
+          <IconButton className={classes.cartButton} aria-label="cart">
             <ShoppingCartOutlinedIcon />
-          </Link>
-        </IconButton>
+          </IconButton>
+        </Link>
       </div>
     </div>
   );
