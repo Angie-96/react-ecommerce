@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
+import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import { CartContext } from "./CartContext";
 import { SearchBar } from "./SearchBar";
 
@@ -22,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     width: "60%",
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
     [theme.breakpoints.down("md")]: {
       width: "90%",
     },
@@ -32,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
   },
   iconButton: {
     padding: 10,
-    color: "rgba(0, 0, 0, 0.54)",
+    color: "white",
+    fontSize: 10,
   },
   cartButton: {
     padding: 10,
@@ -63,6 +66,11 @@ export const Header = () => {
   return (
     <div className={classes.root}>
       <div className={classes.headerContainer}>
+        <Link to="/">
+          <IconButton className={classes.iconButton} aria-label="home">
+            <HomeOutlinedIcon />
+          </IconButton>
+        </Link>
         <SearchBar />
         <Link to="/cart">
           <IconButton className={classes.cartButton} aria-label="cart">
