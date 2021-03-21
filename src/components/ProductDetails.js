@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
   },
   img: {
-    height: "50vh",
+    maxHeight: "50vh",
+    maxWidth: "100%",
     [theme.breakpoints.down("md")]: {
       maxHeight: 300,
       maxWidth: "100%",
@@ -37,15 +38,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "5px 8px",
   },
 
-  /* productName: {
-    marginTop: 0,
-    fontFamily: "Lato, sans-serif",
-  }, */
-
-  /* productPrice: {
-    fontFamily: "sans-serif",
-    fontSize: 25,
-  }, */
   productDesc: {
     marginBottom: 30,
   },
@@ -58,7 +50,7 @@ export const ProductDetails = () => {
   const { filteredProducts } = useContext(DataContext);
   const { addToCart } = useContext(CartContext);
 
-  const productChosen = filteredProducts.filter((product) => product.id === id);
+  const productChosen = filteredProducts.find((product) => product.id === id);
 
   return (
     <Grid container spacing={3} direction="row" className={classes.root}>
@@ -66,30 +58,30 @@ export const ProductDetails = () => {
         <div className={classes.imgContainer}>
           <img
             className={classes.img}
-            src={productChosen[0].images[0]}
-            alt={productChosen[0].name}
+            src={productChosen.images[0]}
+            alt={productChosen.name}
           />
         </div>
       </Grid>
       <Grid item xs={12} md={4}>
         <div className={classes.description}>
           <Typography gutterBottom variant="h5" className={classes.productName}>
-            {productChosen[0].name}
+            {productChosen.name}
           </Typography>
           <Typography
             gutterBottom
             variant="h4"
             className={classes.productPrice}
           >
-            $ {productChosen[0].price}
+            $ {productChosen.price}
           </Typography>
           <Typography variant="body2" className={classes.productDesc}>
-            {productChosen[0].details}
+            {productChosen.details}
           </Typography>
           <Button
             variant="contained"
             color="primary"
-            onClick={() => addToCart(productChosen[0])}
+            onClick={() => addToCart(productChosen)}
           >
             Add to Cart
           </Button>
