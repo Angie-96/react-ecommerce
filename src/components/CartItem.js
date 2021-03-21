@@ -14,6 +14,8 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
     alignItems: "center",
     padding: "20px 10px",
+    backgroundColor: "#e8e8e8",
+    marginTop: 20,
   },
 
   imgContainer: {
@@ -36,7 +38,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const CartItem = ({ id, image, name, price }) => {
+export const CartItem = ({ id, image, name, price, value }) => {
   const { deleteFromCart } = useContext(CartContext);
   const classes = useStyles();
 
@@ -54,11 +56,11 @@ export const CartItem = ({ id, image, name, price }) => {
             type="number"
             id="outlined-basic"
             variant="outlined"
-            value="1"
+            value={value}
           />
         </div>
         <Typography variant="h5" component="h2">
-          $ {price}
+          $ {price * value}
         </Typography>
         <div>
           <IconButton
